@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: hsl(233, 100%, 97%);
+}
+
+header{
+  background-color: hsl(218, 17%, 62%);
+
+  padding: 3.2rem 0 2.9rem;
+
+  text-align: center;
+}
+
+header img {
+  margin-bottom: 3.2rem;
+
+  animation: spin 1000ms;
+}
+
+
+header h1 {  
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  color: hsl(0, 0%, 100%);
+
+  letter-spacing: 0.05em;
+
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  background-color: hsl(275, 18%, 79%);
+
+  padding: 0.8rem 0 0.7rem;
+}
+
+main {
+  max-width: 38.4rem;
+
+  margin: 0 auto;
+
+  padding-bottom: 6rem;
+}
+
+main:not(first-child) {
+  display: grid;
+  gap: 3.2rem;
+}
+
+main p {
+  padding: 1.4rem 3.6rem 6.3rem 4.3rem;
+
+  font-family: 'Palanquin', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: hsl(274, 84%, 12%);
+}
+
+main div {
+  position: relative;
+}
+
+main > div:nth-child(odd) {
+  animation: right-left 700ms;
+}
+
+main > div:nth-child(even) {
+  animation: left-right 700ms;
+}
+
+main img {
+  width: 100%;
+
+  padding: 0 0.5rem;
+}
+
+main h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  padding: 0 2.3rem;
+
+  background-color: hsl(312, 91%, 96%);
+
+  border-radius: 2rem;
+
+  font-family: 'Staatliches';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+
+
+  letter-spacing: 0.05em;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  75% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes right-left {
+  0% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes left-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
